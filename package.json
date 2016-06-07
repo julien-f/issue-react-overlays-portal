@@ -1,0 +1,31 @@
+{
+  "private": true,
+  "devDependencies": {
+    "babel-eslint": "^6.0.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.0.1",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "react-overlays": "^0.6.3",
+    "watchify": "^3.7.0"
+  },
+  "scripts": {
+    "build": "NODE_ENV=production browserify src/index.js -o src/build.js",
+    "dev": "watchify src/index.js -o src/build.js"
+  },
+  "babel": {
+    "presets": [
+      "stage-0",
+      "es2015",
+      "react"
+    ]
+  },
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  }
+}
